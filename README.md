@@ -11,7 +11,7 @@ Este repositório contém uma API REST básica desenvolvida em Node.js usando o 
 
 1.  **Clone este repositório:**
     ```bash
-    git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
+    git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
     ```
     (Substitua `SEU_USUARIO/SEU_REPOSITORIO` pelo seu nome de usuário e nome do repositório no GitHub).
 
