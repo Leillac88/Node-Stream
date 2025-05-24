@@ -1,9 +1,10 @@
 import http from 'node:http'
 
 const users = []
+let nextId = 1
 
-const server = http.createServer( async (req, res) => {
-    const {method, url} = req
+const server = http.createServer(async (req, res) => {
+    const { method, url } = req
 
     const buffers = []
 
@@ -19,17 +20,18 @@ const server = http.createServer( async (req, res) => {
 
     if (method === "GET" && url === '/users') {
         return res
-        .setHeader('Content-Type', 'application/json')
-        .end(JSON.stringify(users))
+            .setHeader('Content-Type', 'application/json')
+            .end(JSON.stringify(users))
     }
 
     if (method === "POST" && url === '/users') {
-        const { name, email } = req.body
+        const { name, email, adress } = req.body
 
         users.push({
-            id: 1,
+            id: nextId++,
             name,
             email,
+            adress,
         })
 
         return res.writeHead(201).end()
